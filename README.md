@@ -1,4 +1,6 @@
 # r-programming-assignments
-Name: Shanzay Khan  
-Course Number: LIS4370  
-Description: Repository for R Programming Assignments
+##  Shanzay 
+###Course LIS4370  
+### Repository for R Programming Assignments
+
+### Blog link: https://r-rstudio-installation.blogspot.com/
