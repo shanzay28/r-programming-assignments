@@ -53,3 +53,7 @@ print(plt)
 
 # Save plot
 ggsave("polls_bar.png", plt, width = 8, height = 5, dpi = 300)
+
+
+#Blog
+https://r-rstudio-installation.blogspot.com/2025/09/module-3-introduction-to-data-frame.html
