@@ -44,12 +44,6 @@ Why operations on B fail (non‑square matrix).
 B is not a square (10×100). Inverse and determinants are only defined for square matrices, therefore both calls are wrong by definition.
 A determinant close to 0 means (almost) singularity and computations that aren't stable.
 It's better to use solution(A, b) (or qr.solve/SVD) to solve systems than to make an explicit inverse; it's more reliable and quicker.
-
-
-
-
-
-
 [1] 0
 <simpleError in solve.default(B): 'a' (10 x 100) must be square>
 <simpleError in determinant.matrix(x, logarithm = TRUE, ...): 'x' must be a square matrix>
