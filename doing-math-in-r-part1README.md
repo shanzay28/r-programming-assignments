@@ -16,10 +16,8 @@ invB <- tryCatch(solve(B), error = function(e) e)
 detB <- tryCatch(det(B),   error = function(e) e)
 
 invA; detA; invB; detB
- 
- Output
 
- > A <- matrix(1:100,  nrow = 10)
+> A <- matrix(1:100,  nrow = 10)
 > B <- matrix(1:1000, nrow = 10)
 > dim(A)  
 [1] 10 10
