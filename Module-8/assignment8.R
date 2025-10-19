@@ -28,3 +28,6 @@ write.table(newx$Name, "NamesWithI.csv",
 write.table(newx, "DataSubset.csv", sep = ",", row.names = FALSE)
 
 list.files(pattern = "Sorted_Average|NamesWithI|DataSubset")
+
+Blog link 
+https://r-rstudio-installation.blogspot.com/2025/10/assignment-8.html
