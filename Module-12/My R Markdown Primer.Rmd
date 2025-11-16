@@ -1,0 +1,61 @@
+---
+title: "My R Markdown Primer"
+author: "Shanzay Khan"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Introduction
+
+R Markdown is a document format that lets you combine **narrative text**, **R code**, and **math formulas** in a single file with the `.Rmd` extension. Instead of running code in R and then copying the results into Word, you keep everything together. When you *knit* the document, R runs all the code chunks and converts the file into a clean HTML (or PDF/Word) report with your text, tables, and plots.
+
+This makes your work more **reproducible**, because anyone with your `.Rmd` file can re-run the analysis and recreate the same output.
+
+---
+
+## Narrative Text and LaTeX Math
+
+R Markdown uses simple **Markdown** syntax for formatting text. For example:
+
+- `#` starts a big heading  
+- `##` starts a smaller heading  
+- `**bold**` → **bold**  
+- `*italic*` → *italic*  
+- `-` creates bullet points  
+
+R Markdown also supports **LaTeX math**. An inline math expression like  
+`$\\alpha + \\beta = \\gamma$` will render as: $\alpha + \beta = \gamma$.
+
+A displayed equation (on its own line) uses double dollar signs:
+
+$$
+\bar{x} = \frac{1}{n} \sum_{i = 1}^{n} x_i
+$$
+
+This is the formula for the sample mean: you add up all values $x_i$ and divide by the number of observations $n$.
+
+---
+
+## R Code Chunks: Loading a Library and Dataset
+
+R code goes inside **code chunks**, which start with three backticks and `{r}` and end with three backticks. When you knit, R runs all of these chunks in order.
+
+The chunk below loads a library and explores a built-in dataset:
+
+```{r setup, message = FALSE}
+# Load ggplot2 for plotting
+library(ggplot2)
+
+# Use the built-in mtcars dataset
+head(mtcars)
+```
+## Simple Analysis and Plot
+summary(mtcars$mpg)
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+geom_point() +
+labs(
+title = "Horsepower vs. Miles per Gallon (mtcars)",
+x = "Horsepower (hp)",
+y = "Miles per Gallon (mpg)"
+)
+
